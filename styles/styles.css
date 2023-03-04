@@ -194,7 +194,7 @@ body {
   color: #333333;
 }
 
-.hotels-search-result-card-link {
+.hotels-result-card-link {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
@@ -202,11 +202,11 @@ body {
   text-decoration: none;
 }
 
-.hotels-search-result-favorite {
+.hotels-result-favorite {
   background-color: #82B3D3;
 }
 
-.hotels-search-result-favorite-picked {
+.hotels-result-favorite-picked {
   background-color: #7DB54F;
 }
 
@@ -246,20 +246,19 @@ body {
   color: #FFFFFF;
 }
 
-.pagination-item.pagination-current {
+.pagination-current {
   background-color: #F2F2F2;
 }
 
-.pagination-item.pagination-etc .pagination-link {
+.pagination-link-etc {
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
   color: #000000;
 }
 
-.pagination-item.pagination-etc {
+.pagination-item-etc {
   background-color: transparent;
-
 }
 
 .newsletter-btn {
