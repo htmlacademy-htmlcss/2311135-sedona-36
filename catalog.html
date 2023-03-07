@@ -8,19 +8,19 @@
   </head>
 
   <body>
-    <header class="page-header">
+    <header class="page-header main-container">
       <nav class="navigation">
         <ul class="navigation-list">
           <li class="navigation-item">
             <a class="navigation-link" href="#">
-              <img class="sedona-logo" src="images/logo.svg" alt="Логотип Города Седона" width="140" height="70">
+              <img class="sedona-logo" src="images/logo.svg" alt="Логотип Города Седона" width="140" height="71">
             </a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="index.html">Главная</a>
           </li>
           <li>
-            <a class="navigation-link" href="#">О седоне</a>
+            <a class="navigation-link" href="#">О Седоне</a>
           </li>
           <li>
             <a class="navigation-link" href="catalog.html">Гостиницы</a>
@@ -31,22 +31,26 @@
           <li class="navigation-item">
             <a class="navigation-link" href="#">
               <span class="visualy-hidden">Поиск</span>
+              <img class="nav-icon" src="images/icons/search.svg" alt="Поиск" width="18" height="18">
             </a>
           </li>
           <li>
-            <a class="navigation-link" href="#">
+            <a class="navigation-link likes-container" href="#">
               <span class="visualy-hidden">Избранное</span>
-              <span class="likes-counter">12</span>
+              <img class="nav-icon" src="images/icons/heart.svg" alt="Нравится" width="18" height="18">
+              <div class="likes-counter-container">
+                <span class="likes-counter">12</span>
+              </div>
             </a>
           </li>
           <li>
-            <a class="navigation-link" href="#">Хочу сюда!</a>
+            <a class="btn navigation-link" href="#">Хочу сюда!</a>
           </li>
         </ul>
       </nav>
     </header>
 
-    <main class="main-inner">
+    <main class="main-inner main-container">
       <header class="inner-header">
         <h1 class="inner-title">Гостиницы Седоны</h1>
         <ul class="breadcrumbs">
@@ -67,17 +71,17 @@
               <legend class="hotel-filter-title">Инфраструктура:</legend>
               <ul class="hotel-filter-list">
                 <li class="hotel-filter-item">
-                  <label class="hotel-filter-item-title" for="swimming-pool-check">Бассейн</label>
                   <input class="hotel-filter-item-input" type="checkbox" name="swimming-pool" id="swimming-pool-check"
                     checked>
+                  <label class="hotel-filter-item-title" for="swimming-pool-check">Бассейн</label>
                 </li>
                 <li class="hotel-filter-item">
-                  <label class="hotel-filter-item-title" for="parking-check">Парковка</label>
                   <input class="hotel-filter-item-input" type="checkbox" name="parking" id="parking-check" checked>
+                  <label class="hotel-filter-item-title" for="parking-check">Парковка</label>
                 </li>
                 <li class="hotel-filter-item">
-                  <label class="hotel-filter-item-title" for="wi-fi-check">Wi-Fi</label>
                   <input class="hotel-filter-item-input" type="checkbox" name="wi-fi" id="wi-fi-check">
+                  <label class="hotel-filter-item-title" for="wi-fi-check">Wi-Fi</label>
                 </li>
               </ul>
             </fieldset>
@@ -85,28 +89,30 @@
               <legend class="hotel-filter-title">Тип жилья:</legend>
               <ul class="hotel-filter-list">
                 <li class="hotel-filter-item">
-                  <label class="hotel-filter-item-title" for="hotel-radio">Гостиница</label>
                   <input class="hotel-filter-item-input" type="radio" name="appartment-type" id="hotel-radio"
                     value="Hotel" checked>
+                  <label class="hotel-filter-item-title" for="hotel-radio">Гостиница</label>
                 </li>
                 <li class="hotel-filter-item">
-                  <label class="hotel-filter-item-title" for="motel-radio">Мотель</label>
                   <input class="hotel-filter-item-input" type="radio" name="appartment-type" id="motel-radio"
                     value="Motel">
+                  <label class="hotel-filter-item-title" for="motel-radio">Мотель</label>
                 </li>
                 <li class="hotel-filter-item">
-                  <label class="hotel-filter-item-title" for="appartment-radio">Апартаменты</label>
                   <input class="hotel-filter-item-input" type="radio" name="appartment-type" id="appartment-radio"
                     value="Appartment">
+                  <label class="hotel-filter-item-title" for="appartment-radio">Апартаменты</label>
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="hotel-filter-group">
+            <fieldset class="hotel-filter-group hotel-filter-price">
               <legend class="hotel-filter-title">Стоимость, ₽:</legend>
             </fieldset>
           </form>
-          <button class="btn hotel-filter-btn-active" type="submit">Применить</button>
-          <button class="btn hotel-filter-btn" type="reset">Сбросить</button>
+          <div class="buttons_container">
+            <button class="btn hotel-filter-btn-active" type="submit">Применить</button>
+            <button class="btn hotel-filter-btn" type="reset">Сбросить</button>
+          </div>
         </section>
       </header>
 
@@ -125,9 +131,9 @@
           </select>
 
           <ul class="hotels-result-display">
-            <li class="hotels-result-display-item">
+            <li class="hotels-result-display-item display-active">
               <a href="#">
-                <img src="images/icons/list.svg" alt="Список" width="16" height="14">
+                <img src="images/icons/tile.svg" alt="Список" width="16" height="14">
               </a>
             </li>
             <li class="hotels-result-display-item">
@@ -137,7 +143,7 @@
             </li>
             <li class="hotels-result-display-item">
               <a href="#">
-                <img src="images/icons/tile.svg" alt="Карточки" width="16" height="14">
+                <img src="images/icons/list.svg" alt="Карточки" width="16" height="14">
               </a>
             </li>
           </ul>
@@ -146,8 +152,8 @@
         <ol class="hotels-result-list">
           <li class="hotels-result-card">
             <a class="hotels-result-card-link" href="#">
-              <img class="hotels-result-card-img" src="images/hotel_amara.jpg" alt="Вид из гостиницы Amara"
-                width="300" height="212">
+              <img class="hotels-result-card-img" src="images/hotel_amara.jpg" alt="Вид из гостиницы Amara" width="300"
+                height="212">
               <h3 class="hotels-result-card-title">Amara Resort & Spa</h3>
             </a>
             <div class="hotels-result-card-info">
@@ -167,8 +173,8 @@
           </li>
           <li class="hotels-result-card">
             <a class="hotels-result-card-link" href="#">
-              <img class="hotels-result-card-img" src="images/hotel_poco_diablo.jpg"
-                alt="Вид из гостиницы Poco Diablo" width="300" height="212">
+              <img class="hotels-result-card-img" src="images/hotel_poco_diablo.jpg" alt="Вид из гостиницы Poco Diablo"
+                width="300" height="212">
               <h3 class="hotels-result-card-title">Villas at Poco Diablo</h3>
             </a>
             <div class="hotels-result-card-info">
@@ -210,8 +216,8 @@
           </li>
           <li class="hotels-result-card">
             <a class="hotels-result-card-link" href="#">
-              <img class="hotels-result-card-img" src="images/hotel_greentree.jpg"
-                alt="Вид из гостиницы GreenTree" width="300" height="212">
+              <img class="hotels-result-card-img" src="images/hotel_greentree.jpg" alt="Вид из гостиницы GreenTree"
+                width="300" height="212">
               <h3 class="hotels-result-card-title">GreenTree Inn</h3>
             </a>
             <div class="hotels-result-card-info">
@@ -245,7 +251,7 @@
             <a class="pagination-link" href="#">4</a>
           </li>
           <li class="pagination-item pagination-item-etc">
-            <a class="pagination-link pagination-link-etc" href="#">...</a>
+            <a class="pagination-link pagination-item-etc" href="#">...</a>
           </li>
           <li class="pagination-item">
             <a class="pagination-link" href="#">10</a>
@@ -254,35 +260,36 @@
       </section>
 
       <section class="newsletter-inner">
-        <h2 class="section-title newsletter-title">Подпишитесь на рассылку</h2>
-        <p class="section-description newsletter-text">Только полезная информация и никакого спама, честное
-          бойскаутское!</p>
-        <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
-          <input class="newsletter-email" placeholder="Ваш e-mail" type="email" name="newsletter-email" required>
-          <button class="btn newsletter-btn" type="submit">Подписаться</button>
-        </form>
+        <div class="content-container">
+          <h2 class="section-title newsletter-title">Подпишитесь на рассылку</h2>
+          <p class="section-description newsletter-text">Только полезная информация и никакого спама, честное
+            бойскаутское!</p>
+          <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
+            <input class="newsletter-email" placeholder="Ваш e-mail" type="email" name="newsletter-email" required>
+            <button class="btn newsletter-btn" type="submit">Подписаться</button>
+          </form>
+        </div>
       </section>
     </main>
 
     <footer class="page-footer">
-      <ul class="page-footer-socials">
-        <li class="page-footer-socials-item">
-          <img class="page-footer-socials-item-icon" src="images/icons/vk.svg" alt="VKontakte" width="24" height="14">
-        </li>
-        <li class="page-footer-socials-item">
-          <img class="page-footer-socials-item-icon" src="images/icons/telegram.svg" alt="Telegram" width="18"
-            height="15">
-        </li>
-        <li class="page-footer-socials-item">
-          <img class="page-footer-socials-item-icon" src="images/icons/youtube.svg" alt="Youtube" width="22"
-            height="17">
-        </li>
-      </ul>
-      <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
-      <a class="page-footer-copyright-link">
-        <img class="page-footer-copyright-img" src="images/icons/html_academy_logo.svg" alt="Логотип HTML academy"
-          width="115" height="33">
-      </a>
+      <div class="footer-container main-container">
+        <ul class="footer-socials">
+          <li class="footer-socials-item">
+            <img class="footer-socials-icon" src="images/icons/vk.svg" alt="VKontakte" width="24" height="14">
+          </li>
+          <li class="footer-socials-item">
+            <img class="footer-socials-icon" src="images/icons/telegram.svg" alt="Telegram" width="18" height="15">
+          </li>
+          <li class="footer-socials-item">
+            <img class="footer-socials-icon" src="images/icons/youtube.svg" alt="Youtube" width="22" height="17">
+          </li>
+        </ul>
+        <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+        <a class="footer-copyright-link">
+          <img class="footer-copyright-img" src="images/icons/html_academy_logo.svg" alt="Логотип HTML academy">
+        </a>
+      </div>
     </footer>
   </body>
 
