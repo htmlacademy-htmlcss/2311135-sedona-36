@@ -201,6 +201,11 @@ body {
   display: flex;
 }
 
+.advantages-item-img{
+  max-width: 100%;
+  height: auto;
+}
+
 .white-text {
   color: #FFFFFF;
 }
@@ -228,17 +233,30 @@ body {
 
 .services-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
 .services-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
   width: 400px;
   height: 385px;
   box-sizing: border-box;
   padding: 81px 85px;
+}
+
+.services-item-icon{
+  order: -1;
+}
+
+.services-item-description,
+.services-item-title{
+  margin: 0;
 }
 
 .light-blue-box {
@@ -446,10 +464,13 @@ body {
   border-radius: 4px;
   display: flex;
   flex-direction: column;
+  gap: 16px;
   box-sizing: border-box;
 }
 
 .hotels-card-link {
+  display: flex;
+  flex-direction: column;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
@@ -458,12 +479,14 @@ body {
 }
 
 .hotels-card-img{
+  max-width: 100%;
+  height: auto;
+  order: -1;
   margin-bottom: 16px;
 }
 
 .hotels-card-title{
   margin: 0;
-  margin-bottom: 16px;
 }
 
 .hotels-type,
@@ -475,7 +498,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 16px;
 }
 
 .hotels-card-actions
@@ -492,7 +514,6 @@ body {
 
 .hotels-card-info{
   margin: 0;
-  margin-bottom: 16px;
   display: flex;
   justify-content: space-between;
 }
