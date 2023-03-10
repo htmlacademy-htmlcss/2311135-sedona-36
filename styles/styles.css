@@ -41,12 +41,6 @@ body {
   margin: 0 auto;
 }
 
-.content-container {
-  width: 684px;
-  margin: 64px auto;
-  text-align: center;
-}
-
 .visualy-hidden {
   display: none;
 }
@@ -118,7 +112,8 @@ body {
 .welcome {
   background-color: #acedf4;
   background-image: url("../images/welcome_background.jpg");
-  height: 767px;
+  background-size:100% 100%;
+  min-height: 767px;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
@@ -126,16 +121,27 @@ body {
 
 .welcome-img {
   display: block;
-  margin: 51px auto 82px;
-}
-
-.welcome-description {
-  margin: 49px auto;
+  margin: 51px auto 135px;
 }
 
 /* Section */
 
+.section-container {
+  width: 684px;
+  text-align: center;
+  margin: 96px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.small-section{
+  margin: 69px auto;
+}
+
 .section-title {
+  margin: 0;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -145,6 +151,7 @@ body {
 }
 
 .section-description {
+  margin: 0;
   font-size: 22px;
   line-height: 26px;
   text-align: center;
@@ -191,6 +198,10 @@ body {
 
 /* Advantages */
 
+.advantages{
+  margin-top: 21px;
+}
+
 .advantages-list {
   list-style-type: none;
   margin: 0;
@@ -214,7 +225,8 @@ body {
   box-sizing: border-box;
   padding: 102px 85px;
   width: 400px;
-  height: 385px;
+  min-height: 385px;
+  /* height: 385px; */
 }
 
 .blue-box {
@@ -245,7 +257,7 @@ body {
   align-items: center;
   gap: 30px;
   width: 400px;
-  height: 385px;
+  min-height: 385px;
   box-sizing: border-box;
   padding: 81px 85px;
 }
@@ -267,13 +279,15 @@ body {
 /* Newsletter */
 
 .newsletter-index {
-  height: 414px;
   background-color: #acedf4;
   background-image: url("../images/subscribe_background.jpg");
-  background-size: 100% auto;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
-  box-sizing: border-box;
-  padding: 46px 258px 104px;
+}
+
+.newsletter-conatiner{
+  margin: 0;
+  padding: 96px 258px;
 }
 
 .newsletter-white-title, .newsletter-white-description {
@@ -406,6 +420,7 @@ body {
 }
 
 .hotels-display-type {
+  margin: 0;
   padding: 0;
   display: flex;
   width: 160px;
