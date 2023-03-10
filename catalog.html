@@ -11,7 +11,7 @@
     <header class="page-header main-container">
       <nav class="navigation">
         <ul class="navigation-list">
-          <li class="navigation-item">
+          <li class="navigation-item icon-container">
             <a class="navigation-link" href="#">
               <img class="sedona-logo" src="images/logo.svg" alt="Логотип Города Седона" width="140" height="71">
             </a>
@@ -89,13 +89,12 @@
               <legend class="hotel-filter-title">Тип жилья:</legend>
               <ul class="hotel-filter-list">
                 <li class="hotel-filter-item">
-                  <input class="hotel-filter-input" type="radio" name="appartment-type" id="hotel-radio"
-                    value="Hotel" checked>
+                  <input class="hotel-filter-input" type="radio" name="appartment-type" id="hotel-radio" value="Hotel"
+                    checked>
                   <label class="hotel-filter-label" for="hotel-radio">Гостиница</label>
                 </li>
                 <li class="hotel-filter-item">
-                  <input class="hotel-filter-input" type="radio" name="appartment-type" id="motel-radio"
-                    value="Motel">
+                  <input class="hotel-filter-input" type="radio" name="appartment-type" id="motel-radio" value="Motel">
                   <label class="hotel-filter-label" for="motel-radio">Мотель</label>
                 </li>
                 <li class="hotel-filter-item">
@@ -105,8 +104,12 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="hotel-filter-group hotel-filter-price">
+            <fieldset class="hotel-filter-group">
               <legend class="hotel-filter-title">Стоимость, ₽:</legend>
+              <ul class="price-box">
+                <li class="price-box-item">0</li>
+                <li class="price-box-item">9000</li>
+              </ul>
             </fieldset>
           </form>
           <div class="buttons_container">
@@ -196,8 +199,8 @@
           <li class="hotels-result-card">
             <a class="hotels-card-link" href="#">
               <h3 class="hotels-card-title">Desert Quail Inn</h3>
-              <img class="hotels-card-img" src="images/hotel_quail.jpg" alt="Вид из гостиницы Quail Inn"
-                width="300" height="212">
+              <img class="hotels-card-img" src="images/hotel_quail.jpg" alt="Вид из гостиницы Quail Inn" width="300"
+                height="212">
             </a>
             <div class="hotels-card-info">
               <p class="hotels-type">Гостиница</p>
@@ -217,8 +220,8 @@
           <li class="hotels-result-card">
             <a class="hotels-card-link" href="#">
               <h3 class="hotels-card-title">GreenTree Inn</h3>
-              <img class="hotels-card-img" src="images/hotel_greentree.jpg" alt="Вид из гостиницы GreenTree"
-                width="300" height="212">
+              <img class="hotels-card-img" src="images/hotel_greentree.jpg" alt="Вид из гостиницы GreenTree" width="300"
+                height="212">
             </a>
             <div class="hotels-card-info">
               <p class="hotels-type">Гостиница</p>
@@ -262,7 +265,8 @@
       <section class="newsletter-inner">
         <div class="section-container">
           <h2 class="section-title newsletter-black-title">Подпишитесь на рассылку</h2>
-          <p class="section-description newsletter-black-description">Только полезная информация и никакого спама, честное
+          <p class="section-description newsletter-black-description">Только полезная информация и никакого спама,
+            честное
             бойскаутское!</p>
           <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
             <input class="newsletter-email" placeholder="Ваш e-mail" type="email" name="newsletter-email" required>
