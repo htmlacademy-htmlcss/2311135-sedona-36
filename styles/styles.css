@@ -165,7 +165,7 @@ body {
 
 .welcome-img {
   display: block;
-  margin: 51px auto 135px;
+  margin: 51px auto 83px;
 }
 
 /* Section */
@@ -177,11 +177,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 25px;
+  gap: 20px;
 }
 
 .small-section {
-  margin: 69px auto;
+  margin: 64px auto;
 }
 
 .section-title {
@@ -288,10 +288,6 @@ body {
 
 /* Advantages */
 
-.advantages {
-  margin-top: 21px;
-}
-
 .advantages-list {
   list-style-type: none;
   margin: 0;
@@ -300,6 +296,14 @@ body {
 
 .advantages-item {
   display: flex;
+}
+
+.advantages-item-title {
+  margin: 0;
+}
+
+.advantages-item-description {
+  margin: 0;
 }
 
 .advantages-item-title::after {
@@ -378,6 +382,13 @@ body {
   ;
 }
 
+/* Interested */
+
+.hotel-search-btn {
+  margin-top: 34px;
+  padding: 16px 60px;
+}
+
 /* Newsletter */
 
 .newsletter-index {
@@ -389,7 +400,7 @@ body {
 
 .newsletter-conatiner {
   margin: 0;
-  padding: 96px 258px;
+  padding: 104px 258px;
 }
 
 .newsletter-white-title,
@@ -413,6 +424,10 @@ newsletter-black-description {
   padding-left: 20px;
   padding-top: 14px;
   padding-bottom: 14px;
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
 
   background: #F2F2F2;
   border-radius: 4px 0 0 4px;
@@ -503,6 +518,12 @@ newsletter-black-description {
   margin-right: 140px;
 }
 
+.hotel-filters-btn {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+}
+
 .range {
   position: relative;
   margin-top: 44px;
@@ -551,11 +572,6 @@ newsletter-black-description {
 
   width: 143px;
   padding: 12px 0 12px 20px;
-
-  /* ToDo: isplay от и до */
-  /* display: flex;
-  justify-content: flex-start;
-  align-items: center; */
 }
 
 .price-input-start {
@@ -626,21 +642,6 @@ newsletter-black-description {
   display: flex;
 }
 
-.hotel-filter-group {
-  padding: 0;
-  margin: 0;
-  border: none;
-}
-
-.hotel-filter-group:first-child,
-.hotel-filter-group:nth-child(3) {
-  margin-right: 70px;
-}
-
-.hotel-filter-group:nth-child(2) {
-  margin-right: 151px;
-}
-
 .hotel-filter-title {
   position: relative;
   font-weight: 700;
@@ -672,7 +673,7 @@ newsletter-black-description {
   opacity: 0.6;
 }
 
-.control-input:focus + .control-mark {
+.control-input:focus+.control-mark {
   outline: 3px solid #83B3D3;
 }
 
@@ -689,17 +690,17 @@ newsletter-black-description {
   left: 0;
 }
 
-.control-input[type="checkbox"]:checked + .control-mark {
+.control-input[type="checkbox"]:checked+.control-mark {
   background-image: url(../images/icons/arrow.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.control-input[type="radio"] + .control-mark {
+.control-input[type="radio"]+.control-mark {
   border-radius: 50%;
 }
 
-.control-input[type="radio"]:checked + .control-mark::before {
+.control-input[type="radio"]:checked+.control-mark::before {
   content: "";
   position: absolute;
   width: 10px;
@@ -845,6 +846,9 @@ newsletter-black-description {
 }
 
 .hotels-card-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
   margin: 0;
 }
 
@@ -1301,8 +1305,8 @@ newsletter-black-description {
   display: none;
 }
 
-.tooltip-toggle:hover + .tooltip-text,
-.tooltip-toggle:focus + .tooltip-text {
+.tooltip-toggle:hover+.tooltip-text,
+.tooltip-toggle:focus+.tooltip-text {
   display: block;
 }
 
