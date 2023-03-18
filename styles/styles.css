@@ -53,23 +53,25 @@ body {
 
 .navigation {
   display: flex;
-  width: 1060px;
-  height: 64px;
+  flex-wrap: wrap;
+  width: 1095px;
   margin: 0 auto;
 }
 
 .navigation-list {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   align-items: center;
-  width: 510px;
+  width: 700px;
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
 .icon-container {
-  width: 140px;
+  width: 153px;
+  margin-right: 30px;
   position: relative;
 }
 
@@ -81,12 +83,17 @@ body {
 }
 
 .navigation-user {
-  max-width: 280px;
+  max-width: 285px;
   margin-left: auto;
 }
 
 .navigation-user-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2px;
   min-width: 44px;
+  min-height: 36px;
   text-align: center;
 }
 
@@ -102,24 +109,26 @@ body {
 
 .navigation-item {
   position: relative;
-  min-width: 100px;
+  margin: 20px 16px;
   text-align: center;
-
 }
 
 .navigation-btn {
-  margin-left: 10px;
+  margin-left: 21px;
 }
 
 .navigation-link-current::before {
   position: absolute;
   top: 43px;
-  left: 15px;
 
   height: 3px;
   width: 68px;
   background-color: #756257;
   content: "";
+}
+
+.link-current-catalog::before {
+  left: 10px;
 }
 
 .btn.navigation-link {
@@ -168,6 +177,10 @@ body {
   margin: 51px auto 83px;
 }
 
+.welcome-title {
+  padding: 5px 0;
+}
+
 /* Section */
 
 .section-container {
@@ -182,6 +195,7 @@ body {
 
 .small-section {
   margin: 64px auto;
+  gap: 30p
 }
 
 .section-title {
@@ -200,6 +214,14 @@ body {
   line-height: 26px;
   text-align: center;
   color: #333333;
+}
+
+.section-description-interested {
+  margin-top: -5px;
+}
+
+.section-description-newsletter {
+  margin-top: -9px;
 }
 
 /* Cards */
@@ -244,6 +266,7 @@ body {
 
 .btn:hover,
 .btn:focus {
+  outline: none;
   background-color: #615048;
 }
 
@@ -284,6 +307,16 @@ body {
 .btn-transparent:focus,
 .btn-green:active {
   background-color: transparent;
+}
+
+.btn-transparent:focus {
+  outline: 3px solid #83B3D3;
+}
+
+.btn:disabled {
+  background-color: #E5E5E5;
+  color: #FFFFFF;
+  cursor: default;
 }
 
 /* Advantages */
@@ -330,6 +363,10 @@ body {
 
 .advantages-description-box {
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 102px 85px;
   width: 400px;
   min-height: 385px;
@@ -385,8 +422,10 @@ body {
 /* Interested */
 
 .hotel-search-btn {
-  margin-top: 34px;
-  padding: 16px 60px;
+  margin-top: 31px;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 36px;
 }
 
 /* Newsletter */
@@ -403,9 +442,14 @@ body {
   padding: 104px 258px;
 }
 
+.newsletter-section-title {
+  margin-top: -5px;
+}
+
 .newsletter-white-title,
 .newsletter-white-description {
   color: #FFFFFF;
+  margin-bottom: 10px;
 }
 
 .newsletter-black-title,
@@ -414,12 +458,16 @@ body {
 }
 
 .newsletter-form {
-  margin-top: 26px;
+  margin-top: 25px;
   display: flex;
 }
 
+.newsletter-form-calalog {
+  margin-top: 36px;
+}
+
 .newsletter-email {
-  width: 452px;
+  width: 456px;
   box-sizing: border-box;
   padding-left: 20px;
   padding-top: 14px;
@@ -432,14 +480,22 @@ body {
   background: #F2F2F2;
   border-radius: 4px 0 0 4px;
   border: 1px solid #F2F2F2;
-  ;
+}
+
+.newsletter-email:focus {
+  outline: 3px solid #83B3D3;
+}
+
+.btn-subscribe {
+  border-radius: 0 4px 4px 0;
+  padding: 8px 54px;
 }
 
 /* Hotels filters (catalog header) */
 
 .inner-header {
   margin-bottom: 50px;
-  padding: 70px;
+  padding: 71px;
   padding-top: 35px;
   background-color: #e0acf4;
   background-image: url("../images/filter_background.jpg");
@@ -476,7 +532,7 @@ body {
 .breadcrumbs-item::after {
   content: "";
   display: inline-block;
-  margin-left: 10px;
+  margin-left: 5px;
   margin-right: 10px;
   width: 7px;
   height: 10px;
@@ -495,11 +551,12 @@ body {
 
 .buttons_container {
   margin-top: 56px;
-  width: 192px;
+  width: 195px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 31px;
 }
 
 .hotel-filter {
@@ -518,9 +575,10 @@ body {
   margin-right: 140px;
 }
 
-.hotel-filters-btn {
+.hotel-filter-btn {
+  padding: 8px 48px;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 20px;
 }
 
@@ -549,6 +607,11 @@ body {
   top: -8px;
 }
 
+.range-toggle:focus,
+.range-toggle:active {
+  outline: 3px solid #83B3D3;
+}
+
 .toggle-max {
   right: 0;
 }
@@ -572,6 +635,17 @@ body {
 
   width: 143px;
   padding: 12px 0 12px 20px;
+}
+
+.price-box-input:focus {
+  outline: 4px solid #83B3D3;
+  background-color: #E6E6E6;
+  color: #000000;
+}
+
+.price-box-input:active {
+  outline: 4px solid #000000;
+  background-color: #F2F2F2;
 }
 
 .price-input-start {
@@ -673,7 +747,11 @@ body {
   opacity: 0.6;
 }
 
-.control-input:focus+.control-mark {
+.control:focus {
+  outline: none;
+}
+
+.control:focus .control-mark {
   outline: 3px solid #83B3D3;
 }
 
@@ -730,6 +808,22 @@ body {
 
 }
 
+.hotels-card-actions .btn {
+  width: 140px;
+  padding: 9px 0;
+}
+
+.hotels-result-btn {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.hotels-details-btn {
+  font-size: 16px;
+}
+
 .hotels-display-type {
   margin: 0;
   padding: 0;
@@ -758,7 +852,6 @@ body {
 
 .display-type-link:focus {
   border: 2px solid #68A2CA;
-  /* outline: none; */
 }
 
 .display-type-link:active,
@@ -808,7 +901,7 @@ body {
   width: 1060px;
   padding: 0;
   margin: 0;
-  margin-bottom: 80px;
+  margin-bottom: 78px;
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
@@ -818,13 +911,13 @@ body {
 
 .hotels-result-card {
   width: 340px;
-  height: 438px;
+  min-height: 438px;
   padding: 20px;
   border: 1px solid #E6E6E6;
   border-radius: 4px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 15px;
   box-sizing: border-box;
 }
 
@@ -842,7 +935,7 @@ body {
   max-width: 100%;
   height: auto;
   order: -1;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .hotels-card-title {
@@ -850,6 +943,7 @@ body {
   font-size: 24px;
   line-height: 28px;
   margin: 0;
+  margin-top: 2px;
 }
 
 .hotels-type,
@@ -861,12 +955,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.hotels-card-actions .btn {
-  width: 140px;
-  box-sizing: border-box;
-  padding: 8px 10px;
 }
 
 .hotels-card-rating {
@@ -882,6 +970,11 @@ body {
 
 .hotels-favorite-picked {
   cursor: default;
+}
+
+.hotels-favorite-picked:disabled {
+  background-color: #82B3D3;
+  cursor: pointer;
 }
 
 .rating-box {
@@ -909,11 +1002,11 @@ body {
   padding: 0;
   display: flex;
   list-style-type: none;
-  margin-bottom: 60px;
+  margin-bottom: 58px;
 }
 
 .pagination-item {
-  width: 60px;
+  min-width: 60px;
   height: 60px;
   background-color: #82B3D3;
   border-radius: 4px;
@@ -934,6 +1027,8 @@ body {
   height: 100%;
   justify-content: center;
   align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
@@ -961,7 +1056,10 @@ body {
 .pagination-current-link:active {
   background-color: #F2F2F2;
   color: #000000;
+}
 
+.pagination-link:focus {
+  outline: none;
 }
 
 .pagination-link-etc {
@@ -976,9 +1074,12 @@ body {
   color: #000000;
 }
 
-.btn-subscribe {
-  border-radius: 0 4px 4px 0;
+.pagination-item-etc:hover,
+.pagination-item-etc:focus,
+.pagination-item-etc:active {
+  background-color: transparent;
 }
+
 
 /* Footer */
 
@@ -1011,6 +1112,7 @@ body {
 }
 
 .footer-logo {
+  margin-top: -3px;
   fill: #000000;
 }
 
@@ -1025,8 +1127,9 @@ body {
 
 .footer-socials {
   display: flex;
-  justify-content: space-between;
-  width: 144px;
+  justify-content: flex-start;
+  max-width: 250px;
+  flex-wrap: wrap;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -1043,6 +1146,8 @@ body {
   align-items: center;
   width: 100%;
   height: 100%;
+  box-sizing: border-box;
+  padding: 10px;
 }
 
 .footer-copyright-link {
@@ -1161,6 +1266,11 @@ body {
 
 .booking-input:focus {
   outline: 3px solid #83B3D3;
+}
+
+.booking-input:active {
+  background-color: #E6E6E6;
+  outline: 3px solid #000000;
 }
 
 .popup-info-message {
