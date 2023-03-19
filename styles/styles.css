@@ -110,7 +110,6 @@ body {
   color: #000000;
 }
 
-
 .navigation-item {
   position: relative;
   margin: 20px 8px;
@@ -118,6 +117,8 @@ body {
 }
 
 .navigation-btn {
+  display: block;
+  max-width: 160px;
   margin-left: 21px;
 }
 
@@ -136,6 +137,7 @@ body {
 }
 
 .btn.navigation-link {
+  display: block;
   padding: 8px 34px;
 }
 
@@ -430,6 +432,8 @@ body {
 }
 
 .hotel-search-btn {
+  display: block;
+  max-width: 376px;
   margin-top: 35px;
   font-weight: 700;
   font-size: 17px;
@@ -447,7 +451,7 @@ body {
 
 .newsletter-conatiner {
   margin: 0;
-  padding: 10px 258px;
+  padding: 102px 258px;
 }
 
 .newsletter-section-title {
@@ -466,7 +470,7 @@ body {
 }
 
 .newsletter-form {
-  margin-top: 25px;
+  margin-top: 21px;
   display: flex;
 }
 
@@ -495,6 +499,8 @@ body {
 }
 
 .btn-subscribe {
+  display: block;
+  max-width: 232px;
   border-radius: 0 4px 4px 0;
   padding: 8px 54px;
 }
@@ -584,6 +590,8 @@ body {
 }
 
 .hotel-filter-btn {
+  display: block;
+  max-width: 200px;
   padding: 8px 48px;
   font-weight: 700;
   font-size: 14px;
@@ -989,8 +997,6 @@ body {
 
 .rating-box {
   width: 140px;
-  height: 37px;
-
   border: none;
   border-radius: 4px;
   background-color: #F2F2F2;
@@ -1088,6 +1094,7 @@ body {
 .pagination-item-etc:focus,
 .pagination-item-etc:active {
   background-color: transparent;
+  color: #000000;
 }
 
 
